@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact.css">
+  <script>
+    function sendMessage() {
+      alert("Your message has been sent successfully! 😊");
+    }
+  </script>
+</head>
+<body>
+  <h1>Contact</h1>
+
+  <table class="contact-table" border="1">
+    <tr>
+      <th colspan="2">Send a Message</th>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><input type="email" name="email"></td>
+    </tr>
+    <tr>
+      <td>Phone:</td>
+      <td><input type="tel" name="phone"></td>
+    </tr>
+    <tr>
+      <td>Subject:</td>
+      <td><input type="text" name="subject"></td>
+    </tr>
+    <tr>
+      <td>Message:</td>
+      <td><textarea name="message" rows="4" cols="25"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <button type="button" onclick="sendMessage()">Send Message</button>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
