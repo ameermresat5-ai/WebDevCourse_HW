@@ -1,52 +1,25 @@
-body {
-  background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 40px;
+
+table {
+  border: 2px solid #3b6fff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
-h1 {
-  color: #333;
-  font-size: 28px;
-}
-
-.contact-table {
-  margin: 20px auto;
-  border-collapse: collapse;
-  width: 400px;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-table th {
-  background-color: #eaf1ff;
-  padding: 10px;
-  font-size: 18px;
-  color: #333;
-}
-
-.contact-table td {
-  padding: 8px;
-  text-align: left;
-}
-
-input, textarea {
-  width: 95%;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
+th {
   background-color: #3b6fff;
   color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+  font-size: 1.1em;
+  padding: 12px;
 }
 
-button:hover {
-  background-color: #2f57cc;
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #d8e4ff;
+  transition: background-color 0.3s;
 }
