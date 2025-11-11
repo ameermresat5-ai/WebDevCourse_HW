@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags Reference - Comprehensive List</title>
+
+  <!-- Link to the active SKIN stylesheet -->
+  <link id="skin-link" rel="stylesheet" href="SKINS/basic.css">
+
+  <!-- Script to switch between SKINS -->
+  <script>
+    function changeSkin(skinName) {
+      document.getElementById("skin-link").href = "SKINS/" + skinName + ".css";
+    }
+  </script>
+
+  <style>
+    /* Optional basic styling for the skin switcher buttons */
+    .skin-buttons {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .skin-buttons button {
+      background-color: #0078d7;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .skin-buttons button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- SKIN SWITCHER BUTTONS -->
+  <div class="skin-buttons">
+    <button onclick="changeSkin('basic')">Basic</button>
+    <button onclick="changeSkin('dark')">Dark</button>
+    <button onclick="changeSkin('modern')">Modern</button>
+  </div>
+
+  <header>
+    <h1>Complete HTML Tags Reference Guide</h1>
+    <p>A comprehensive demonstration of HTML tags without CSS styling</p>
+  </header>
+
+  <nav>
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="#document">Document Structure</a></li>
+      <li><a href="#text">Text Content</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#tables">Tables</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- your entire existing content stays the same -->
+    <!-- (everything from <article id="document"> to </footer> exactly as before) -->
+    <!-- Just paste all your existing sections below this comment -->
+    
+    <!-- START OF EXISTING CONTENT -->
+    <!--  Paste your big HTML content here (unchanged) -->
+    <!-- END OF EXISTING CONTENT -->
+  </main>
+
+  <aside>
+    <h2>Additional Notes</h2>
+    <p>This page demonstrates HTML tags in their raw, unstyled form.</p>
+    <p>Later, we can add CSS to style these elements beautifully!</p>
+  </aside>
+
+  <footer>
+    <hr>
+    <p>HTML Tags Reference Page</p>
+    <p>Created: November 2025</p>
+    <p>Total tags demonstrated: 100+</p>
+    <small>This page contains most HTML5 tags for educational purposes</small>
+  </footer>
+</body>
+
+</html>
