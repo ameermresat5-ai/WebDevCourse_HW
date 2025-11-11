@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Favorite Songs</title>
+  <link rel="stylesheet" href="audioList.css">
+</head>
+<body>
+  <h1> My Favorite Songs</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Cover</th>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Year</th>
+        <th>Play</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="PRNT_IMAGES/Imagine.png" alt="Imagine cover" class="cover"></td>
+        <td>Imagine</td>
+        <td>John Lennon</td>
+        <td>1971</td>
+        <td>
+          <audio controls>
+            <source src="AudioFiles/Imagine.mp3" type="audio/mpeg">
+          </audio>
+        </td>
+        <td><a href="AudioFiles/Imagine.mp3" download>Download</a></td>
+      </tr>
+      <tr>
+        <td><img src="PRNT_IMAGES/Bohemian.png" alt="Bohemian Rhapsody cover" class="cover"></td>
+        <td>Bohemian Rhapsody</td>
+        <td>Queen</td>
+        <td>1975</td>
+        <td>
+          <audio controls>
+            <source src="AudioFiles/Bohemian Rhapsody.mp3" type="audio/mpeg">
+          </audio>
+        </td>
+        <td><a href="AudioFiles/Bohemian Rhapsody.mp3" download>Download</a></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
