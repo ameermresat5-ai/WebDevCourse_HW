@@ -49,14 +49,3 @@ form button {
 form button:hover {
     background-color: #3399ff;
 }
-body {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  font-family: 'Segoe UI', sans-serif;
-}
-h1, h2, h3 {
-  color: #4fa3ff;
-}
-a {
-  color: #61dafb;
-}

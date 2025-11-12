@@ -26,12 +26,3 @@ form input, form select, form textarea, form button {
     margin: 5px 0;
     padding: 5px;
 }
-body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-}
-h1, h2, h3 {
-  color: #0066cc;
-}
-
