@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB - CLIENT | Register</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-badge">WC</div>
+        <div>
+          <div>WEB - CLIENT</div>
+          <small>Create a new account</small>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="btn ghost">Home</a>
+        <a href="login.html" class="btn ghost" data-auth="out">Log in</a>
+        <button class="btn ghost" data-auth="in" data-logout>Log out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-card reveal">
+      <h1 class="form-title">Create your account</h1>
+      <p class="muted">Fill out the details to start building playlists.</p>
+      <div id="registerMessage" class="notice" hidden></div>
+      <form id="registerForm" novalidate>
+        <div class="field">
+          <label for="registerUsername">Username</label>
+          <input id="registerUsername" name="username" type="text" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="registerFullName">Full name</label>
+          <input id="registerFullName" name="fullName" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="registerEmail">Email</label>
+          <input id="registerEmail" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="registerAvatar">Avatar (URL)</label>
+          <input id="registerAvatar" name="avatar" type="url" class="ltr" placeholder="https://" required />
+        </div>
+        <div class="field">
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" name="password" type="password" autocomplete="new-password" required />
+        </div>
+        <div class="field">
+          <label for="registerConfirm">Confirm password</label>
+          <input id="registerConfirm" name="confirm" type="password" autocomplete="new-password" required />
+        </div>
+        <p class="small muted">Password must be at least 6 characters and include one letter and one number.</p>
+        <button class="btn" type="submit">Create account</button>
+      </form>
+      <p class="small">Already registered? <a class="text-link" href="login.html">Back to log in</a>.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

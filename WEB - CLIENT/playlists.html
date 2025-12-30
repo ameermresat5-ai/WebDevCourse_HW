@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB - CLIENT | Playlists</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-badge">WC</div>
+        <div>
+          <div>WEB - CLIENT</div>
+          <small>Your playlist library</small>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="btn ghost">Home</a>
+        <a href="search.html" class="btn ghost">Search</a>
+        <button class="btn ghost" data-logout>Log out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="split-layout">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">My library</h2>
+        <button class="btn" id="newPlaylistBtn">+ New playlist</button>
+        <div id="playlistList" class="sidebar-list"></div>
+        <button class="btn secondary" id="playPlaylistBtn">Play playlist</button>
+      </aside>
+      <section class="content-panel">
+        <div class="content-header">
+          <div>
+            <h1 id="playlistTitle" class="form-title">Select a playlist</h1>
+            <p id="playlistMeta" class="muted small"></p>
+          </div>
+          <div class="control-row">
+            <input id="playlistFilter" type="search" placeholder="Search within playlist" />
+            <button class="btn ghost" id="sortNameBtn">Sort A-Z</button>
+            <button class="btn ghost" id="sortRatingBtn">Sort by rating</button>
+            <button class="btn danger" id="deletePlaylistBtn">Delete playlist</button>
+          </div>
+        </div>
+        <div id="emptyState" class="notice" hidden>Select a playlist from the list.</div>
+        <div id="playlistItems" class="playlist-items"></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="newPlaylistDialog">
+    <div class="dialog-content">
+      <h2 class="form-title">New playlist</h2>
+      <div class="field">
+        <label for="newPlaylistInput">Playlist name</label>
+        <input id="newPlaylistInput" type="text" placeholder="e.g. Road trip" />
+      </div>
+      <div class="dialog-actions">
+        <button class="btn ghost" id="cancelNewPlaylist">Cancel</button>
+        <button class="btn" id="createPlaylistBtn">Create playlist</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="playlistPlayerDialog">
+    <div class="dialog-content">
+      <h2 id="playerPlaylistTitle" class="form-title"></h2>
+      <iframe id="playlistFrame" class="video-frame" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="control-row">
+        <button class="btn ghost" id="prevTrack">Previous</button>
+        <button class="btn ghost" id="nextTrack">Next</button>
+      </div>
+      <div class="dialog-actions">
+        <button class="btn ghost" id="closePlaylistPlayer">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+  <script src="playlists.js"></script>
+</body>
+</html>

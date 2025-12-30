@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB - CLIENT | Log in</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-badge">WC</div>
+        <div>
+          <div>WEB - CLIENT</div>
+          <small>Sign in to your account</small>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="btn ghost">Home</a>
+        <a href="register.html" class="btn" data-auth="out">Register</a>
+        <button class="btn ghost" data-auth="in" data-logout>Log out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-card reveal">
+      <h1 class="form-title">Log in</h1>
+      <p class="muted">Enter your username and password to continue.</p>
+      <div id="loginMessage" class="notice" hidden></div>
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="loginUsername">Username</label>
+          <input id="loginUsername" name="username" type="text" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <button class="btn" type="submit">Log in</button>
+      </form>
+      <p class="small">No account yet? <a class="text-link" href="register.html">Register here</a>.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

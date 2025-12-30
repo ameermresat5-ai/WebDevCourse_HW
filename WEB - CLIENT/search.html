@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB - CLIENT | Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-badge">WC</div>
+        <div>
+          <div>WEB - CLIENT</div>
+          <small>Search and add tracks</small>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="btn ghost">Home</a>
+        <a href="playlists.html" class="btn ghost">Playlists</a>
+        <button class="btn ghost" data-logout>Log out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-header">
+      <div>
+        <p class="eyebrow">Search</p>
+        <h1 class="hero-title">Welcome, <span data-user-name></span></h1>
+        <p class="hero-subtitle">Type a song or artist to get started.</p>
+      </div>
+      <div class="search-card">
+        <div class="user-pill">
+          <img data-user-avatar src="https://via.placeholder.com/80" alt="Profile photo" />
+          <div>
+            <div class="small muted">Signed in as</div>
+            <div data-user-name></div>
+          </div>
+        </div>
+        <button class="btn ghost" id="apiKeyButton">Set YouTube API key</button>
+      </div>
+    </section>
+
+    <section class="search-card">
+      <form id="searchForm" class="search-form" novalidate>
+        <label for="searchInput" class="small muted">Search by song title or artist</label>
+        <div class="search-row">
+          <input id="searchInput" name="q" type="search" placeholder="e.g. Coldplay Yellow" required />
+          <button class="btn" type="submit">Search</button>
+        </div>
+      </form>
+      <div class="control-row">
+        <span id="apiKeyStatus" class="small muted"></span>
+      </div>
+      <div id="searchMessage" class="notice" hidden></div>
+    </section>
+
+    <section class="results-grid" id="results"></section>
+  </main>
+
+  <dialog id="playerDialog">
+  <div class="dialog-content">
+    <h2 id="playerTitle" class="form-title"></h2>
+
+    <div class="player-box">
+      <!-- Thumbnail shown first -->
+      <button id="playerOverlay" class="player-overlay" type="button">
+        <img id="playerThumb" alt="Video thumbnail" />
+        <span class="player-overlay-icon">▶</span>
+      </button>
+
+     
+      <iframe
+        id="playerFrame"
+        class="video-frame hidden"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="dialog-actions">
+      <a id="playerOpenYT" class="text-link" target="_blank" rel="noreferrer">Open on YouTube</a>
+      <button class="btn ghost" id="closePlayer">Close</button>
+    </div>
+  </div>
+</dialog>
+
+
+  <dialog id="addDialog">
+    <div class="dialog-content">
+      <h2 class="form-title">Add to playlist</h2>
+      <p id="addVideoTitle" class="muted"></p>
+      <div class="field">
+        <label for="playlistSelect">Choose an existing playlist</label>
+        <select id="playlistSelect"></select>
+      </div>
+      <div class="field">
+        <label for="newPlaylistName">Or create a new playlist</label>
+        <input id="newPlaylistName" type="text" placeholder="New playlist name" />
+      </div>
+      <div class="dialog-actions">
+        <button class="btn ghost" id="cancelAdd">Cancel</button>
+        <button class="btn" id="confirmAdd">Add</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="apiDialog">
+    <div class="dialog-content">
+      <h2 class="form-title">YouTube API key</h2>
+      <p class="muted">Add a key to query the YouTube Data API.</p>
+      <div class="field">
+        <label for="apiKeyInput">API key</label>
+        <input id="apiKeyInput" type="text" class="ltr" placeholder="AIza..." />
+      </div>
+      <div class="dialog-actions">
+        <button class="btn ghost" id="cancelApi">Close</button>
+        <button class="btn" id="saveApi">Save key</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

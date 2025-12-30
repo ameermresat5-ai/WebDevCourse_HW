@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB - CLIENT | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-badge">WC</div>
+        <div>
+          <div>WEB - CLIENT</div>
+          <small>Your personal music hub</small>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="login.html" class="btn ghost" data-auth="out">Log in</a>
+        <a href="register.html" class="btn" data-auth="out">Register</a>
+        <a href="search.html" class="btn ghost" data-auth="in">Search</a>
+        <a href="playlists.html" class="btn ghost" data-auth="in">Playlists</a>
+        <button class="btn ghost" data-auth="in" data-logout>Log out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card reveal">
+        <p class="eyebrow">WEB - CLIENT Project</p>
+        <h1 class="hero-title">Personal music library powered by YouTube</h1>
+        <p class="hero-subtitle">
+          Search tracks, save them into playlists, and play instantly in one place. Everything stays in your browser.
+        </p>
+        <div class="info-grid">
+          <div class="info-block">
+            <div class="label">Student Name</div>
+            <div class="value">Enter name here</div>
+          </div>
+          <div class="info-block">
+            <div class="label">Student ID</div>
+            <div class="value">000000000</div>
+          </div>
+        </div>
+        <div class="link-row">
+          <a class="link-card" href="https://github.com/username/repo" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="link-card" href="https://your-live-site.example.com" target="_blank" rel="noreferrer">Live Demo</a>
+        </div>
+        <div class="cta-row">
+          <a href="login.html" class="btn">Log in</a>
+          <a href="register.html" class="btn ghost">Register</a>
+        </div>
+      </div>
+      <div class="hero-card highlight reveal" data-delay="0.1">
+        <h2 class="form-title">What is included?</h2>
+        <ul class="feature-list">
+          <li>Search YouTube with rich result cards.</li>
+          <li>Save tracks into custom favorite playlists.</li>
+          <li>Rate, sort, and filter songs with ease.</li>
+          <li>Built-in player with quick navigation.</li>
+        </ul>
+        <div class="cta-row">
+          <a href="search.html" class="btn secondary">Start searching</a>
+          <a href="playlists.html" class="btn ghost">Go to library</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
